@@ -1,0 +1,23 @@
+ALGORITHM algorithm_name
+VAR
+  voy : ARRAY_OF_STRING :=["y","e","u","i","o","a","A","O","I","U","E","Y"];
+    k,i,j:INTEGER:=0;
+    nb_voy=:0;
+    e:=0;
+BEGIN
+FOR i FROM 0 TO ch.length STEP 1  DO
+FOR j FROM 0 TO voy.length STEP 1  DO
+    IF (ch[i]=voy[j]) THEN
+        nb_voy++;
+    END_IF
+END_FOR
+END_FOR
+FOR k FROM 0 TO ch.length STEP 1  DO
+    IF (ch[k]=" ") THEN
+    e:=e+1;
+    END_IF
+END_FOR
+write("le nombre de voyelles est:", nb_voy);
+write("le nombre de mot est:", e);
+write("le nombre de caractere est:", i);
+END
